@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.10
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NG.Data.Spanner.Tests", "NG.Data.Spanner.Tests.csproj", "{FA7B8C18-D2E3-4355-83D0-E4D7C173EFAC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NG.Data.Spanner", "..\NG.Data.Spanner\NG.Data.Spanner.csproj", "{9BE01DE2-C42F-49F9-BE68-E2A3F1E264C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NG.Data.Spanner.EF", "..\NG.Data.Spanner.EF\NG.Data.Spanner.EF.csproj", "{18C47E1E-DFBE-4532-98C3-9187E6855382}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FA7B8C18-D2E3-4355-83D0-E4D7C173EFAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA7B8C18-D2E3-4355-83D0-E4D7C173EFAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA7B8C18-D2E3-4355-83D0-E4D7C173EFAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA7B8C18-D2E3-4355-83D0-E4D7C173EFAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BE01DE2-C42F-49F9-BE68-E2A3F1E264C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BE01DE2-C42F-49F9-BE68-E2A3F1E264C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BE01DE2-C42F-49F9-BE68-E2A3F1E264C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BE01DE2-C42F-49F9-BE68-E2A3F1E264C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18C47E1E-DFBE-4532-98C3-9187E6855382}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18C47E1E-DFBE-4532-98C3-9187E6855382}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18C47E1E-DFBE-4532-98C3-9187E6855382}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18C47E1E-DFBE-4532-98C3-9187E6855382}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,28 @@
+
+-- Creating DB Schema
+
+CREATE TABLE Countries (
+  CountryCode STRING(10) NOT NULL,
+  Name STRING(MAX) NOT NULL
+) PRIMARY KEY(CountryCode);
+
+CREATE TABLE Games (
+  GameId STRING(MAX) NOT NULL,
+  CreationTime TIMESTAMP NOT NULL,
+  EndTime TIMESTAMP,
+) PRIMARY KEY(GameId);
+
+CREATE TABLE GamePlayers (  
+  GameId STRING(MAX) NOT NULL,
+  PlayerId STRING(MAX) NOT NULL,
+) PRIMARY KEY(GameId, PlayerId),
+INTERLEAVE IN PARENT Games ON DELETE CASCADE;
+
+CREATE TABLE Players (
+  PlayerId STRING(MAX) NOT NULL,
+  CountryCode STRING(10) NOT NULL,
+  Status INT64 NOT NULL,
+  Age INT64 NOT NULL,
+  IsGamer BOOL,
+  AddressJson STRING(MAX),
+) PRIMARY KEY(PlayerId);
