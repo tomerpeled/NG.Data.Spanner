@@ -141,7 +141,9 @@ namespace NG.Data.Spanner
 
         public override DateTime GetDateTime(int ordinal)
         {
-            return Convert.ToDateTime(GetValue(ordinal));
+            var dateTimeString = GetValue(ordinal) as string;
+            return string.IsNullOrEmpty(dateTimeString) ? Convert.ToDateTime(dateTimeString) :
+                DateTimeOffset.Parse(dateTimeString).UtcDateTime;
         }
 
         public override string GetString(int ordinal)

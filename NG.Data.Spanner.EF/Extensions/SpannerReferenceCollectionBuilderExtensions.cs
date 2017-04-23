@@ -30,8 +30,6 @@ namespace NG.Data.Spanner.EF.Extensions
         {
             Check.NotNull(services, nameof(services));
 
-            //GrpcEnvironment.SetCompletionQueueCount(1);
-
             services.AddRelational()
                 .AddScoped<IRelationalCommandBuilderFactory, SpannerCommandBuilderFactory>()
                 .AddScoped<RelationalQueryContextFactory, SpannerQueryContextFactory>()
