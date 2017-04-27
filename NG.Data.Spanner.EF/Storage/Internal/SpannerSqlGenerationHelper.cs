@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore.Storage;
+﻿using System.Data;
+using System.Text;
+using Microsoft.EntityFrameworkCore.Storage;
 
 namespace NG.Data.Spanner.EF.Storage.Internal
 {
@@ -10,5 +12,9 @@ namespace NG.Data.Spanner.EF.Storage.Internal
             return r;
         }
 
+        protected override string GenerateLiteralValue(bool value)
+        {
+            return $"{value}";
+        }
     }
 }
