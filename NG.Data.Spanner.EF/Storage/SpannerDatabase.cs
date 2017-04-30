@@ -203,7 +203,7 @@ namespace NG.Data.Spanner.EF.Storage
             {
                 value.StringValue = propertyVal.ToString();
             }
-            else if (propertyType.IsEnum)
+            else if (propertyType.IsEnum || IsNullableEnum(propertyType))
             {
                 value.StringValue = ((int)propertyVal).ToString();
             }
@@ -251,6 +251,12 @@ namespace NG.Data.Spanner.EF.Storage
                 };
             }
             return value;
+        }
+
+        private static bool IsNullableEnum(System.Type t)
+        {
+            var u = Nullable.GetUnderlyingType(t);
+            return (u != null) && u.IsEnum;
         }
 
         private async Task RunTranasactionAsync(List<Mutation> mutations)
